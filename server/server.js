@@ -16,3 +16,5 @@ connectDB();
 app.listen(3001, () => {
   console.log("Server started");
 });
+
+//MONGODB_URI=mongodb+srv://pratik:pratik1234@cluster0.mgcr37z.mongodb.net/?retryWrites=true&w=majority
