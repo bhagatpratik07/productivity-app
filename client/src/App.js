@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Todo from "./pages/Todo";
 import Pomodoro from "./pages/Pomodoro";
-import Calendar from "./pages/Calendar";
+import TaskCalendar from "./pages/TaskCalendar";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/pomodoro" element={<Pomodoro />} />
-        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/calendar" element={<TaskCalendar />} />
       </Routes>
     </div>
   );

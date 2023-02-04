@@ -3,7 +3,8 @@ const connectDB = require("./config/db");
 const app = express();
 const bodyParser = require("body-parser");
 const todoRoutes = require("./routes/todo.route");
-const pomodoroRoutes = require("./routes/pomodoro.route");
+const meetingRoutes = require("./routes/meeting.route");
+
 const cors = require("cors");
 
 app.use(cors());
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/todos", todoRoutes);
-app.use("/pomodoro", pomodoroRoutes);
+app.use("/meetings", meetingRoutes);
 
 connectDB();
 

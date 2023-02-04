@@ -24,13 +24,6 @@ export default function Pomodoro() {
     setIsRunning(false);
   };
 
-  function formatDuration(durationInSeconds) {
-    const minutes = Math.floor((durationInSeconds % 3600) / 60);
-    const seconds = durationInSeconds % 60;
-
-    return `${minutes}:${seconds}`;
-  }
-
   let minutes = Math.floor(duration / 60);
   let seconds = duration % 60;
 
@@ -75,4 +68,12 @@ useEffect(() => {
           <p>Duration: {formatDuration(pomodoro.duration)}</p>
         </div>
       ))}
+
+
+       // function formatDuration(durationInSeconds) {
+  //   const minutes = Math.floor((durationInSeconds % 3600) / 60);
+  //   const seconds = durationInSeconds % 60;
+
+  //   return `${minutes}:${seconds}`;
+  // }
 */
