@@ -12,7 +12,7 @@ function TodoList() {
       const res = await fetch("http://localhost:3001/todos");
       const response = await res.json();
       setTodos(response);
-      console.log(response);
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
