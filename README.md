@@ -16,9 +16,9 @@ Keep track of your meetings and never miss an important one again with our Meeti
 
 ## Tech Stack
 
-React.js for the frontend
-Node.js and Express for the backend
-MongoDB for database management
+React.js for the frontend\
+Node.js and Express for the backend\
+MongoDB for database management\
 
 ### Getting Started
 
@@ -26,7 +26,6 @@ To use this app, simply fork the repository and run the following command in you
 
 ```
 npm i
-
 ```
 
 This will install all the required dependencies for the app.
