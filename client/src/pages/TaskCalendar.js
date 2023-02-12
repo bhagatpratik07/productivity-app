@@ -32,10 +32,12 @@ const TaskCalendar = () => {
       alert("Failed to create meeting");
     }
   };
+
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/meetings/${id}`);
-      setMeetings(meetings.filter((todo) => todo._id !== id));
+      await axios
+        .delete(`http://localhost:3001/meetings/${id}`)
+        .then(setMeetings(meetings.filter((meeting) => meeting._id !== id)));
     } catch (error) {
       console.error(error);
     }

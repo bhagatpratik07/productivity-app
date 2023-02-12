@@ -58,16 +58,24 @@ exports.getMeetingsByDate = async (req, res) => {
   }
 };
 
-exports.delete = async (req, res) => {
-  try {
-    Metting.findByIdAndRemove(req.params.id).then((meeting) => {
+exports.delete = (req, res) => {
+  Meeting.findByIdAndRemove(req.params.id)
+    .then((meeting) => {
       if (!meeting) {
-        return res.send({ message: "Meeting not found" });
+        return res.status(404).send({
+          message: "Meeting not found with id " + req.params.id,
+        });
       }
       res.send({ message: "Meeting deleted successfully!" });
+    })
+    .catch((err) => {
+      if (err.kind === "ObjectId" || err.name === "NotFound") {
+        return res.status(404).send({
+          message: "Todo not found with id " + req.params.id,
+        });
+      }
+      return res.status(500).send({
+        message: "Could not delete todo with id " + req.params.id,
+      });
     });
-  } catch (error) {
-    console.error(error);
-    res.send({ message: "Failed to delete meeting" });
-  }
 };
