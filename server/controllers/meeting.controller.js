@@ -71,11 +71,11 @@ exports.delete = (req, res) => {
     .catch((err) => {
       if (err.kind === "ObjectId" || err.name === "NotFound") {
         return res.status(404).send({
-          message: "Todo not found with id " + req.params.id,
+          message: "Meeting not found with id " + req.params.id,
         });
       }
       return res.status(500).send({
-        message: "Could not delete todo with id " + req.params.id,
+        message: "Could not delete meeting with id " + req.params.id,
       });
     });
 };
