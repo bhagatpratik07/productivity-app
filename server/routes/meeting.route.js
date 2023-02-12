@@ -8,4 +8,6 @@ router.post("/", meetingController.create);
 
 router.get("/:date", meetingController.getMeetingsByDate);
 
+router.delete("/:id", meetingController.delete);
+
 module.exports = router;

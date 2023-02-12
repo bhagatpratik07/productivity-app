@@ -82,6 +82,27 @@ function TodoList() {
     setNewTodo({ title: todo.title, description: todo.description });
   };
 
+  // checkbox
+  const handleCheck = async (id) => {
+    try {
+      const todo = todos.find((todo) => todo._id === id);
+      const updatedTodo = { ...todo, completed: !todo.completed };
+      const response = await axios.put(
+        `http://localhost:3001/todos/${id}`,
+        updatedTodo
+      );
+      const updatedTodoList = todos.map((item) => {
+        if (item._id === id) {
+          return response.data;
+        }
+        return item;
+      });
+      setTodos(updatedTodoList);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -104,6 +125,11 @@ function TodoList() {
       <ul>
         {todos.map((todo) => (
           <li key={todo._id}>
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => handleCheck(todo._id)}
+            />
             {todo.title} - {todo.description}
             <button onClick={() => handleDelete(todo._id)}>Delete</button>
             <button onClick={() => handleEdit(todo)}>Edit</button>

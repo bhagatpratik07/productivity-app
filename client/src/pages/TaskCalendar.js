@@ -20,12 +20,24 @@ const TaskCalendar = () => {
     event.preventDefault();
     try {
       const meeting = { name, date };
-      await axios.post("http://localhost:3001/meetings", meeting);
+      const response = await axios.post(
+        "http://localhost:3001/meetings",
+        meeting
+      );
       setName("");
+      setMeetings([response.data, ...meetings]);
       alert("Meeting created successfully");
     } catch (error) {
       console.error(error.message);
       alert("Failed to create meeting");
+    }
+  };
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3001/meetings/${id}`);
+      setMeetings(meetings.filter((todo) => todo._id !== id));
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -34,7 +46,7 @@ const TaskCalendar = () => {
       const response = await fetch(`http://localhost:3001/meetings/`);
       const data = await response.json();
       setMeetings(data);
-      console.log(data);
+      // console.log(data);
     }
     getMeetings();
   }, []);
@@ -48,8 +60,11 @@ const TaskCalendar = () => {
       </form>
       {meetings.map((meeting) => (
         <div key={meeting._id}>
-          <h3>{meeting.name}</h3>
-          <h2>{meeting.date}</h2>
+          <a target="_blank" href="meetlink" rel="noreferrer">
+            <h3>{meeting.name}</h3>
+            <h2>{meeting.date}</h2>
+          </a>
+          <button onClick={() => handleDelete(meeting._id)}>Delete</button>
         </div>
       ))}
     </div>

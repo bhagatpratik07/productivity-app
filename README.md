@@ -4,21 +4,21 @@ A simple and powerful app to help you boost your productivity and achieve your g
 
 ### Todo List
 
-Keep track of your tasks and prioritize them with our Todo list. Simply add your tasks and a description for each one.
+Keep track of your tasks and prioritize them with Todo list. Simply add your tasks and a description for each one.
 
 ### Pomodoro Timer
 
-Maximize your focus and get more done with our Pomodoro timer. Based on the Pomodoro Technique, this timer will help you work in focused intervals followed by short breaks.
+Maximize your focus and get more done with Pomodoro timer. Based on the Pomodoro Technique, this timer will help you work in focused intervals followed by short breaks.
 
 ### Meeting Setter (currently under development)
 
-Keep track of your meetings and never miss an important one again with our Meeting setter.
+Keep track of your meetings and never miss an important one again with Meeting setter.
 
 ## Tech Stack
 
 React.js for the frontend\
 Node.js and Express for the backend\
-MongoDB for database management\
+MongoDB for database management
 
 ### Getting Started
 
