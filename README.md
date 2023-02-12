@@ -25,7 +25,13 @@ MongoDB for database management
 To use this app, simply fork the repository and run the following command in your terminal:
 
 ```
+cd server
 npm i
 ```
 
-This will install all the required dependencies for the app.
+```
+cd client
+npm i
+```
+
+This will install all the required dependencies on both the server and client side for the app.
