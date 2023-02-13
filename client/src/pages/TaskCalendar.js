@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../styles/TaskCalender.css";
 import axios from "axios";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";

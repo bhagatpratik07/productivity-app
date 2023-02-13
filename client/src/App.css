@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* font-family: 'Quicksand', sans-serif; 300 400 500 600 700*/
+
+
 * {
-    transition: 250ms;
+    font-family: 'Quicksand', sans-serif;
 }
 
 html {

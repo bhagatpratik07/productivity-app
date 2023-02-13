@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color: #7286D3;
+    height: 700px;
+    width: fit-content;
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.navbar ul a h1 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    width: 100%;
+    padding: 3rem 2rem;
+    background-image: linear-gradient(to bottom right, #E5E0FF, #FFF2F2);
+    border-radius: 2rem;
+    color: #3E52A0;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.navbar a li{
+    color: #7286D3;
+     display: flex;
+    align-items: center;
+    /*justify-content: center; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+    padding: 1rem;
+    margin: 0.7rem;
+    height: 70px;
+    width: inherit;
+    border-radius: 23px;
+
+}
+
+.navbar a li:hover {
+    background-image: linear-gradient(to bottom right, #E5E0FF, #FFF2F2);
+    font-weight: 700;
+    box-shadow: rgba(229, 224, 255, 0.55) 0px 7px 29px 0px;
+}
+
+.navbar img {
+    width: 1.9rem;
+    margin: 0 1rem;
+}
+
+/* .heading {
+    background-image: linear-gradient(to bottom right, #E5E0FF, #FFF2F2);
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    padding: 3rem 3.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+} */

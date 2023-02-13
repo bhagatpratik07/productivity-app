@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "../styles/Pomodoro.css";
+
 
 export default function Pomodoro() {
   const [duration, setDuration] = useState(25 * 60); // 25 minutes in seconds
@@ -28,7 +30,7 @@ export default function Pomodoro() {
   let seconds = duration % 60;
 
   return (
-    <div>
+    <div className="pomodoro">
       <h1>Pomodoro</h1>
 
       <div>
