@@ -55,7 +55,7 @@ const TaskCalendar = () => {
   }, []);
 
   return (
-    <div>
+    <div className="calendar">
       <Calendar value={date} onChange={handleDateChange} />
       <form onSubmit={handleSubmit}>
         <input type="text" value={name} onChange={handleNameChange} />

@@ -10,11 +10,22 @@ html {
     background-image:url(./styles/images/backgroundImage.svg);
     background-repeat:no-repeat;
     background-size:cover;
+
 }
 
-body {
+.parent {
     height: 100vh;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
+
+.child {
+    flex: 1;
+    margin: 10px;
+    background-color: #ccc;
+    flex-shrink: 0;
+  }
