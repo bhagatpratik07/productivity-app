@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import "../styles/ToDo.css";
 import axios from "axios";
 
+function auto_grow(element) {
+  element.style.height = "5px";
+  element.style.height = (element.scrollHeight)+"px";
+}
+
 function TodoList() {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState({ title: "", description: "" });
@@ -22,17 +27,6 @@ function TodoList() {
   useEffect(() => {
     getTodos();
   }, []);
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await axios.post("http://localhost:3001/todos", newTodo);
-  //     setTodos([...todos, response.data]);
-  //     setNewTodo({ title: "", description: "" });
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -105,23 +99,26 @@ function TodoList() {
   };
 
   return (
-    <div>
+    <div className="toDo">
+      <h1 className="heading">To-Do</h1>
       <form onSubmit={handleSubmit}>
         <input
+        className="titleBar textbox"
           type="text"
           placeholder="Title"
           value={newTodo.title}
           onChange={(e) => setNewTodo({ ...newTodo, title: e.target.value })}
         />
-        <input
-          type="text"
+        <textarea
+        className="descBar textbox"
+        type="text"
           placeholder="Description"
           value={newTodo.description}
           onChange={(e) =>
             setNewTodo({ ...newTodo, description: e.target.value })
           }
-        />
-        <button type="submit">Add Todo</button>
+        ></textarea>
+        <button className="sbtBtn" type="submit">Add Todo</button>
       </form>
       <ul>
         {todos.map((todo) => (

@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="navbar">
             <ul>
                 <Link to="/">
-                    <h1 className="heading">Productivity App</h1>
+                    <h1 className="head">Productivity App</h1>
                 </Link>
                 <Link to="/todo">
                     <li><img src = {todo} alt="ToDo icon"/> To-Do List</li>

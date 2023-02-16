@@ -1,3 +1,82 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+.toDo {
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+    width: 332px;
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.heading {
+  text-align: center;
+  margin: 1rem auto 32px auto;
+}
+
+.textbox {
+    display: block;
+    border: 2px solid rgba(229, 224, 255, 0.55);
+    border-radius: 1rem;
+    height: 3rem;
+    width: 90%;
+    margin: 1rem auto 1.5rem auto;
+    padding: 0 1.3rem;
+}
+
+.textbox:focus {
+  border: 2px solid rgb(229, 224, 255);
+  transition: 200ms;
+  box-shadow: inset 5px 5px 7px -7px rgba(229, 224, 255),inset 0px -5px 4px -6px rgba(0,0,0,0.1);
+}
+
+.titleBar {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.descBar {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.7rem 1.3rem;
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 3rem;
+  height: 6rem;
+  max-height: 12rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  height: 50%;
+  margin: 1rem;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E5E0FF; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E5E0FF; 
+}
+
+.sbtBtn {
 }
