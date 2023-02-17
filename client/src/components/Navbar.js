@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import todo from "../styles/todo.svg";
-import pomodoro from "../styles/pomodoro.svg";
-import calendar from "../styles/calendar.svg";
+import todo from "../styles/icons/todo.svg";
+import pomodoro from "../styles/icons/pomodoro.svg";
+import calendar from "../styles/icons/calendar.svg";
 
 export default function Navbar() {
     return (

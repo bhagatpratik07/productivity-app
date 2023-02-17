@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/ToDo.css";
+import pencilIcon from "../styles/icons/pencilIcon.svg";
+
 import axios from "axios";
 
 function auto_grow(element) {
@@ -118,7 +120,7 @@ function TodoList() {
             setNewTodo({ ...newTodo, description: e.target.value })
           }
         ></textarea>
-        <button className="sbtBtn" type="submit">Add Todo</button>
+        <button className="sbtBtn" type="submit">Add Todo<img src={pencilIcon} className="pencilicon" alt="" srcset="" /></button>
       </form>
       <ul>
         {todos.map((todo) => (

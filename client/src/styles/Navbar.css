@@ -20,7 +20,7 @@
     font-size: 2.1rem;
     width: 100%;
     padding: 3rem 2rem;
-    background-image: linear-gradient(to bottom right, #E5E0FF, #FFF2F2);
+    background-image: linear-gradient(to bottom right, #e4dfff, #ffeaea);
     border-radius: 2rem;
     color: #3E52A0;
     text-align: center;
@@ -45,7 +45,7 @@
 }
 
 .navbar a li:hover {
-    background-image: linear-gradient(to bottom right, #E5E0FF, #FFF2F2);
+    background-image: linear-gradient(to bottom right, #e5e0ff, #ffeaea);
     font-weight: 700;
     box-shadow: rgba(229, 224, 255, 0.55) 0px 7px 29px 0px;
 }
@@ -53,4 +53,5 @@
 .navbar img {
     width: 1.9rem;
     margin: 0 1rem;
+    
 }

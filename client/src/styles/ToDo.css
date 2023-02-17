@@ -5,7 +5,7 @@
 }
 
 *:focus {
-  outline: none;
+    outline: none;
 }
 
 .toDo {
@@ -19,14 +19,15 @@
 }
 
 .heading {
-  text-align: center;
-  margin: 1rem auto 32px auto;
+    color: #3e52a0;
+    text-align: center;
+    margin: 1rem auto 32px auto;
 }
 
 .textbox {
     display: block;
     border: 2px solid rgba(229, 224, 255, 0.55);
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     height: 3rem;
     width: 90%;
     margin: 1rem auto 1.5rem auto;
@@ -34,49 +35,85 @@
 }
 
 .textbox:focus {
-  border: 2px solid rgb(229, 224, 255);
-  transition: 200ms;
-  box-shadow: inset 5px 5px 7px -7px rgba(229, 224, 255),inset 0px -5px 4px -6px rgba(0,0,0,0.1);
+    border: 2px solid rgb(229, 224, 255);
+    transition: 200ms;
+    box-shadow: inset 5px 5px 7px -7px rgba(229, 224, 255),
+        inset 0px -5px 4px -6px rgba(0, 0, 0, 0.1);
 }
 
 .titleBar {
-  font-size: 1.25rem;
-  font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .descBar {
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 0.7rem 1.3rem;
-  max-width: 90%;
-  min-width: 90%;
-  min-height: 3rem;
-  height: 6rem;
-  max-height: 12rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.7rem 1.3rem;
+    max-width: 90%;
+    min-width: 90%;
+    min-height: 3rem;
+    height: 6rem;
+    max-height: 12rem;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
-  height: 50%;
-  margin: 1rem;
+    border-radius: 10px;
+    height: 50%;
+    margin: 1rem;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #E5E0FF; 
-  border-radius: 10px;
+    background: #e5e0ff;
+    border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #E5E0FF; 
+    background: #e5e0ff;
 }
 
 .sbtBtn {
+    /* display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #866eff, #d3caff);
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    
+    text-align: left; */
+    color: #ffffff;
+    background-image: linear-gradient(to bottom right, #866eff, #d3caff);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: left;
+    padding: 0 1.6rem;
+    margin: 1rem auto 1.5rem auto;
+    height: 3rem;
+    width: 90%;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.sbtBtn:hover {
+    transition: 200ms;
+    font-weight: 700;
+    box-shadow: 3px 9px 15px -8px rgba(134, 110, 255, 0.3);
+}
+
+.pencilicon {
+    width: 1.5rem;
 }
