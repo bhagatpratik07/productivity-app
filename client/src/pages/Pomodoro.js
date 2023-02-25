@@ -1,48 +1,57 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Pomodoro.css";
+import pauseIcon from "../styles/icons/pause.svg";
+import startIcon from "../styles/icons/start.svg";
 
 
 export default function Pomodoro() {
-  const [duration, setDuration] = useState(25 * 60); // 25 minutes in seconds
-  const [isRunning, setIsRunning] = useState(false);
-  const [intervalId, setIntervalId] = useState(null);
+    const [duration, setDuration] = useState(25 * 60); // 25 minutes in seconds
+    const [isRunning, setIsRunning] = useState(false);
+    const [intervalId, setIntervalId] = useState(null);
 
-  const startTimer = () => {
-    const id = setInterval(() => {
-      setDuration((duration) => {
-        if (duration === 0) {
-          clearInterval(intervalId);
-          setIsRunning(false);
-        }
-        return duration - 1;
-      });
-    }, 1000);
-    setIsRunning(true);
-    setIntervalId(id);
-  };
+    const startTimer = () => {
+        const id = setInterval(() => {
+            setDuration((duration) => {
+                if (duration === 0) {
+                    clearInterval(intervalId);
+                    setIsRunning(false);
+                    duration = 0;
+                }
+                return duration - 1;
+            });
+        }, 1000);
+        setIsRunning(true);
+        setIntervalId(id);
+    };
 
-  const stopTimer = () => {
-    clearInterval(intervalId);
-    setIsRunning(false);
-  };
+    const stopTimer = () => {
+        clearInterval(intervalId);
+        setIsRunning(false);
+    };
 
-  let minutes = Math.floor(duration / 60);
-  let seconds = duration % 60;
+    let minutes = Math.floor(duration / 60);
+    let seconds = duration % 60;
 
-  return (
-    <div className="pomodoro">
-      <h1>Pomodoro</h1>
+    return (
+        <div className="pomodoro">
+            <h1 className="heading">Pomodoro</h1>
 
-      <div>
-        {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
-      </div>
-      {isRunning ? (
-        <button onClick={stopTimer}>Stop</button>
-      ) : (
-        <button onClick={startTimer}>Start</button>
-      )}
-    </div>
-  );
+            <div className="mainPomodoro">
+                <div className="counter">
+                    {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+                </div>
+                {isRunning ? (
+                    <button className="actionBtn" onClick={stopTimer}>
+                        <img className="actionIcon pauseIcon" src={pauseIcon} alt="Pause" />
+                    </button>
+                ) : (
+                    <button className="actionBtn" onClick={startTimer}>
+                        <img className="actionIcon startIcon" src={startIcon} alt="Start" />
+                    </button>
+                )}
+            </div>
+        </div>
+    );
 }
 
 /* 

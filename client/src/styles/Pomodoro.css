@@ -1,3 +1,65 @@
 * {
     box-sizing: border-box;
+    transition: 200ms;
 }
+
+.pomodoro {
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+    width: 332px;
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 1rem 0 1rem 1rem;
+    padding: 1.5rem 2rem;
+}
+
+.mainPomodoro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.counter {
+    margin: 3rem;
+    padding: 2rem;
+    font-size: 4rem;
+    width: 224px;
+    height: 144px;
+    font-weight: 700;
+    border-radius: 2rem;
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(229, 224, 255) 0px 7px 29px 0px;
+    background-color: #8ec5fc;
+    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+
+.actionBtn {
+    transition: 200ms;
+    background-color: transparent;
+    border: none;
+    /* border-radius: 2rem; */
+}
+
+.actionBtn:hover {
+    transition: 200ms;
+}
+
+.actionIcon {
+    cursor: pointer;
+    width: 10rem;
+    border-radius: 5rem;
+    border: 14px dotted transparent;
+    box-shadow: rgb(229, 224, 255) 0px 7px 29px 0px;
+}
+
+.pauseIcon:hover {
+    border: 5px dotted #e0c3fc;
+}
+
+.startIcon:hover {
+    border: 5px dotted #8ec5fc;
+}
+
+
+

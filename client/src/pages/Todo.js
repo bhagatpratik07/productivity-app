@@ -152,7 +152,6 @@ function TodoList() {
                     </li>
                 ))}
             </ul>
-            <hr />
             <form onSubmit={handleSubmit}>
                 <input
                     className="titleBar textbox"
