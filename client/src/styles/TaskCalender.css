@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+.calendar {
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+    width: 332px;
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 1rem 0 1rem 1rem;
+    padding: 1.5rem 2rem;
+}
+
+.meetingDesc {
+    overflow: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    height: 40%;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    height: 50%;
+    margin: 1rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e5e0ff;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e5e0ff;
+}
+
+.meet {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0.7rem;
+}
+
+.deleteBtn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-right: 0.5rem;
+    width: 1.7rem;
+}
+
+.deleteIcon {
+    width: 2rem;
+}
+
+.meetTitle {
+    color: #6d53ed
+}

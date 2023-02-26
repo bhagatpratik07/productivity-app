@@ -8,13 +8,13 @@ import TaskCalendar from "./pages/TaskCalendar";
 
 function App() {
   return (
-    <div>
+    <div className="parent">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/todo" element={<Todo />} />
-        <Route path="/pomodoro" element={<Pomodoro />} />
-        <Route path="/calendar" element={<TaskCalendar />} />
+        <Route className="child" path="/" element={<Home />} />
+        <Route className="child" path="/todo" element={<Todo />} />
+        <Route className="child" path="/pomodoro" element={<Pomodoro />} />
+        <Route className="child" path="/calendar" element={<TaskCalendar />} />
       </Routes>
     </div>
   );
